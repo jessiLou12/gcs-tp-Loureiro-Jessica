@@ -2,16 +2,24 @@
 
 Sistema básico para registrar clientes mediante nombre, correo electrónico y teléfono.
 
-## Versión
-1.0 - Línea base inicial.
+## Tecnologías
+- HTML5
+- JavaScript
+- Node.js para las pruebas.
 
-## Estructura
-- src/: código fuente del sistema.
-- tests/: pruebas del sistema.
-- docs/: documentación del proyecto.
+## Versiones
+- v1.0: línea base inicial.
+- v1.1: validación del formato del teléfono.
 
 ## Ejecución
-Abrir el archivo src/index.html en un navegador web.
+Abrir src/index.html en un navegador web.
 
-## Estado inicial
-El sistema permite registrar clientes, pero todavía no valida que el teléfono contenga solamente números.
+## Pruebas
+Ejecutar desde la raíz del proyecto:
+
+node tests/test_validacion.js
+
+## Cambio de versión 1.1
+Se incorporó una validación para permitir exclusivamente números en el campo teléfono.
+
+Ticket relacionado: #101.

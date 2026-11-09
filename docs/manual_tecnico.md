@@ -3,15 +3,31 @@
 ## Tecnologías
 - HTML5
 - JavaScript
+- Node.js para ejecutar las pruebas.
 
 ## Componentes
-- index.html: contiene el formulario de registro.
-- script.js: contiene la lógica de registro de clientes.
+- src/index.html: interfaz del formulario.
+- src/script.js: lógica de registro y validación.
+- tests/test_validacion.js: pruebas unitarias.
 
-## Funcionamiento
-La función registrarCliente recibe nombre, correo y teléfono.
-Verifica que los campos no estén vacíos y devuelve un mensaje.
+## Función validarTelefono
 
-## Limitación inicial
-No se verifica que el teléfono contenga exclusivamente números.
-Esta limitación será tratada mediante el ticket #101.
+La función recibe un teléfono y verifica su formato mediante una expresión regular.
+
+Código:
+
+function validarTelefono(tel) {
+    return /^[0-9]+$/.test(tel);
+}
+
+La expresión regular utiliza:
+- ^: indica el inicio del texto.
+- [0-9]: permite únicamente dígitos.
+- +: exige uno o más dígitos.
+- $: indica el final del texto.
+- test(): devuelve true si el valor cumple la expresión.
+
+La función rechaza letras, espacios, guiones y valores vacíos.
+
+## Cambio realizado
+La validación fue incorporada en la versión 1.1 para resolver el ticket #101.
